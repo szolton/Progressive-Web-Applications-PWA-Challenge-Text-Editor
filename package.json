@@ -8,7 +8,8 @@
     "server": "nodemon server/server.js --ignore client",
     "build": "webpack --mode production",
     "install": "cd client && npm install",
-    "client": "webpack serve --mode development --open"
+    "client": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
   },
   "keywords": [],
   "author": "",
