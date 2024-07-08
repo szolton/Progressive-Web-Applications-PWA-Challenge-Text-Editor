@@ -1,15 +1,39 @@
-// This is where you can define your custom service worker logic
-import { precacheAndRoute } from 'workbox-precaching';
-import { registerRoute } from 'workbox-routing';
-import { StaleWhileRevalidate } from 'workbox-strategies';
+const { offlineFallback, warmStrategyCache } = require("workbox-recipes");
+const { CacheFirst, StaleWhileRevalidate } = require("workbox-strategies");
+const { registerRoute } = require("workbox-routing");
+const { CacheableResponsePlugin } = require("workbox-cacheable-response");
+const { ExpirationPlugin } = require("workbox-expiration");
+const { precacheAndRoute } = require("workbox-precaching/precacheAndRoute");
 
-// Precache and route assets
 precacheAndRoute(self.__WB_MANIFEST);
 
-// Cache strategy for API calls or other routes
+const pageCache = new CacheFirst({
+  cacheName: "page-cache",
+  plugins: [
+    new CacheableResponsePlugin({
+      statuses: [0, 200],
+    }),
+    new ExpirationPlugin({
+      maxAgeSeconds: 30 * 24 * 60 * 60,
+    }),
+  ],
+});
+
+warmStrategyCache({
+  urls: ["/index.html", "/"],
+  strategy: pageCache,
+});
+
+registerRoute(({ request }) => request.mode === "navigate", pageCache);
+
 registerRoute(
-  ({ request }) => request.destination === 'image',
+  ({ request }) => ["style", "script", "worker"].includes(request.destination),
   new StaleWhileRevalidate({
-    cacheName: 'images',
+    cacheName: "asset-cache",
+    plugins: [
+      new CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
   })
 );
