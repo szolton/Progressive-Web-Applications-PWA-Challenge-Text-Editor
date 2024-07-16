@@ -4,10 +4,6 @@ The purpose of this project was to build a text editor that runs in a browser. I
 
 To build the text editor, we started with an existing application and implement methods for getting and storing data to an IndexedDB Database. It will use a package called idb, which is a lightweight wrapper around the IndexedDB API. It has a lot of methods that are helpful for storing and retrieving data.
 
-I began by doing research and finding sources -- these videos were equally helpful in various parts of the assignment.
-
-Sources: https://www.youtube.com/watch?v=m9OSBJaQTlM&ab_channel=PortEXE, https://www.codingnepalweb.com/weather-app-project-html-javascript/, https://home.openweathermap.org/, https://www.youtube.com/watch?v=MIYQR-Ybrn4&ab_channel=GreatStack
-
 # User Story
 AS A developer,
 I WANT to create nodes or code snippits with or without an internet connection,
