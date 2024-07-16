@@ -10,28 +10,26 @@ Sources: https://www.youtube.com/watch?v=m9OSBJaQTlM&ab_channel=PortEXE, https:/
 
 # User Story
 AS A developer,
-I WANT to create nodes or code snippits with or without an internet connection
+I WANT to create nodes or code snippits with or without an internet connection,
 SO THAT I can reliably retrieve them for later use.
 
-![color-palette](./Assets/images/colors.png)
+# Process
 
-Next, I updated it to create HTML and CSS to make a weather site with the mentioned teals and peaches. Then, I updated the JavaScript. Here is a cool feature of making city, state and zip codes searchable as well, for ultimate accuracy.
+![loaded-screen](../Progressive-Web-Applications-PWA-Challenge-Text-Editor//Client/src/images/loaded%20screen.png)
 
-Search by city.
+Here, you can see a screenshot of the text editor that loads with the local host after running the command from the terminal, "npm run start."
 
-![landing-page](./Assets/images/first-page.png)
+![landing-page](../Progressive-Web-Applications-PWA-Challenge-Text-Editor/Client/src/images/install.png)
 
-Search by zip code.
+Here, you can see the working option to install the text editor app.
 
-![zip-codes](./Assets/images/zip-codes.png)
+![downloaded-app](../Progressive-Web-Applications-PWA-Challenge-Text-Editor/Client/src/images/downloaded-app.png)
 
-Here is a cool feature of the current location button, it lets the user automatically check the weather around them.
+Here's a screenshot of the downloaded application that's functioning.
 
-![current-location](./Assets/images/location.png)
+I completed the TO DOs in the files by researching PWAs like here https://web.dev/learn/pwa/ and here https://www.youtube.com/watch?v=sFsRylCQblw and here https://www.youtube.com/playlist?list=PLyuRouwmQCjmDHxKD7g9s6FhOKG3xim85 to help me better understand the material.
 
-The page is also responsive and works well on a mobile device.
-
-![mobile](./Assets/images/mobile-1.png) ![mobile](./Assets/images/mobile-2.png)
+The problem I ran into was that my index.html file was blank, even though it shouldn't have been. I used class resources with a tutor to fix that issue, it worked after that.
 
 # In conclusion
 I set up a text editor web application that:
