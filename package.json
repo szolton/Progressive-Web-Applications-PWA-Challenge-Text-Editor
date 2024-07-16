@@ -1,17 +1,15 @@
 {
   "name": "JATE",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just Another Text Editor",
   "main": "server.js",
   "scripts": {
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\"",
     "start": "npm run build && cd server && node server.js",
-    "server": "cd server && nodemon --exec babel-node server.js --ignore client",
+    "server": "cd server && node server.js --ignore client",
     "build": "cd client && npm run build",
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
-    "client": "cd client && npm start",
-    "babel": "babel server -d dist --ignore client",
-    "start:babel": "npm run babel && node dist/server.js"
+    "client": "cd client && npm start"
   },
   "keywords": [],
   "author": "",
@@ -23,9 +21,13 @@
   "devDependencies": {
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4",
-    "@babel/cli": "^7.12.10",
-    "@babel/core": "^7.12.10",
-    "@babel/node": "^7.12.10",
-    "@babel/preset-env": "^7.12.11"
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2",
+    "babel-loader": "^8.2.2",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "html-webpack-plugin": "^5.3.1",
+    "workbox-webpack-plugin": "^6.1.5"
   }
 }
