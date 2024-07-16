@@ -11,15 +11,15 @@ SO THAT I can reliably retrieve them for later use.
 
 # Process
 
-![loaded-screen](../Progressive-Web-Applications-PWA-Challenge-Text-Editor//Client/src/images/loaded%20screen.png)
+![loaded-screen](./Client/src/images/loaded%20screen.png)
 
 Here, you can see a screenshot of the text editor that loads with the local host after running the command from the terminal, "npm run start."
 
-![landing-page](../Progressive-Web-Applications-PWA-Challenge-Text-Editor/Client/src/images/install.png)
+![landing-page](./Client/src/images/install.png)
 
 Here, you can see the working option to install the text editor app.
 
-![downloaded-app](../Progressive-Web-Applications-PWA-Challenge-Text-Editor/Client/src/images/downloaded-app.png)
+![downloaded-app](./Client/src/images/downloaded-app.png)
 
 Here's a screenshot of the downloaded application that's functioning.
 
@@ -53,4 +53,4 @@ I set up a text editor web application that:
 
 The hardest part was just working with the JavaScript and the weather API's to adjust them to how I wanted the information to look on the page, and fine-tuning the CSS.
 
-Please follow this link to the successful, full deployed site on GitHub: https://szolton.github.io/06-challenge-week6-Interactive-Weather-Page/
+Please follow this link to my repository: https://github.com/szolton/Progressive-Web-Applications-PWA-Challenge-Text-Editor
